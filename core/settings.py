@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com']
 
@@ -173,4 +173,4 @@ TAILWIND_APP_NAME = 'theme'
 #WHITE NOISE SETTIGNS
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUDSTED_ORIGINS = ['https://web-production-36b8.up.railway.app', 'https://*']
+CSRF_TRUDSTED_ORIGINS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com']
