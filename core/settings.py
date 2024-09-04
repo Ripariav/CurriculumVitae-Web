@@ -173,4 +173,4 @@ TAILWIND_APP_NAME = 'theme'
 #WHITE NOISE SETTIGNS
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CSRF_TRUDSTED_ORIGINS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com']
+CSRF_TRUDSTED_ORIGINS = ['danielriverav.up.railway.app', 'danielriverav.com']
