@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 
-if DEBUG:
+if DEBUG == True:
     # Configuración para el entorno de desarrollo
     DATABASES = {
         'default': {
