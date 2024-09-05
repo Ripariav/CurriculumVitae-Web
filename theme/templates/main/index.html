@@ -2,10 +2,10 @@
 {% block title %} Daniel Rivera - Ripariav {% endblock %} 
 {% block content %}
 <div class="md:flex items-center justify-center h-screen md:flex-row flex-col " id="container">
-  <div class="bg-slate-800 text-white z-10 sm:rounded-lg shadow-[-24px_-24px_0px_1px_rgba(162,_128,_255,_1),_4px_0_10px_rgba(0,0,0,0.3)] min-w-[30rem] scrollreveal" data-sr-delay="200" data-sr-origin="bottom" id="profile-card" >
+  <div class="bg-slate-800 text-white z-10 md:rounded-lg md:shadow-[-24px_-24px_0px_1px_rgba(162,_128,_255,_1),_4px_0_10px_rgba(0,0,0,0.3)] md:min-w-[30rem] md:scrollreveal" data-sr-delay="200" data-sr-origin="bottom" id="profile-card" >
     <div id="img-profile-card" class="relative rounded-t-lg min-h-96 bg-cover bg-center " style="background-image: url({% static 'img/photo-profile.png' %})">
     </div>
-    <svg class=" -translate-y-20 z-10 min-w-[30rem] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1e293b" fill-opacity="1" d="M0,160L720,224L1440,128L1440,320L720,320L0,320Z"></path></svg>
+    <svg class=" -translate-y-20 z-10 md:min-w-[30rem] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#1e293b" fill-opacity="1" d="M0,160L720,224L1440,128L1440,320L720,320L0,320Z"></path></svg>
     <div id="info-profile-card" class="flex flex-col justify-center gap-y-2 ">
     <div class="flex flex-col justify-center items-center ">
       <img src="{% static "img/logo.svg" %}" alt="logo" class="bg-slate-800 shadow-md shadow-electric-violet-600 rounded-full w-28 h-28 z-20 absolute -translate-y-28">
@@ -90,28 +90,32 @@
       </ul>
     </div>
     <div id="buttons-profile-card" class="justify-center flex mt-6">
-      <button id="down-cv-profile-card" class="px-6 border-r py-4 border-t-2 w-full rounded-bl-lg border-electric-violet-400 hover:bg-electric-violet-400 hover:text-white transition-all">Download Cv</button>
+      <a id="down-cv-profile-card" download="cv.pdf" href="{% static "pdf/cv.pdf" %}" download="nombre_del_archivo.pdf" class="algin-center justify-center flex cursor-pointer px-6 border-r py-4 border-t-2 w-full rounded-bl-lg border-electric-violet-400 hover:bg-electric-violet-400 hover:text-white transition-all">Download Cv</a>
       <a href="#contact" id="contact-profile-card" class="px-6 border-l py-4 border-t-2 w-full rounded-br-lg justify-center items-center flex cursor-pointer border-electric-violet-400 hover:bg-electric-violet-400 hover:text-white transition-all">Contact Me</a>
     </div>
     </div>
   </div>
 
-  <!-- Navbar -->
-  <nav class="py-4 z-10 absolute top-52 w-0 md:block md:absolute hidden scrollreveal" data-sr-delay="1800" data-sr-origin="bottom">
-    <div class="space-x-6 bg-electric-violet-400 text-white p-4 rounded-lg absolute -translate-y-40 -translate-x-12 scroll-smooth flex flex-row justify-center items-center shadow-xl w-[550px]">
-      <a href="#about-me" class="text-md  hover:text-black transition-all ">About</a>
-      <a href="#experience" class="text-md  hover:text-black transition-all ">Experience</a>
-      <a href="#projects" class="text-md  hover:text-black transition-all ">Projects</a>
-      <a href="#education" class="text-lmd hover:text-black transition-all ">Education</a>
-      <a href="#blog" class="text-md  hover:text-black transition-all ">Blog</a>
-      <a href="#contact" class="text-md  hover:text-black transition-all ">Contact</a>
-    </div>
-
-  </nav>
+  
+  
   
 {% comment %} ALL INFO {% endcomment %}
-  <div class=" w-full  md:w-[850px] md:h-[650px] bg-slate-800 md:overflow-auto md:rounded-lg  md:-translate-x-2  shadow-2xl scrollreveal" data-sr-delay="800" data-sr-origin="left">
-    <div class="flex flex-col bg-slate-800 text-slate-200 scroll-smooth scrollreveal" data-sr-delay="1200" data-sr-origin="left">
+  <div class=" w-full  md:w-[850px] md:h-[650px] bg-slate-800 md:overflow-auto md:rounded-lg  md:-translate-x-2  shadow-2xl md:scrollreveal" data-sr-delay="800" data-sr-origin="left"> 
+    <div class="flex flex-col bg-slate-800 text-slate-200 scroll-smooth md:scrollreveal" data-sr-delay="1200" data-sr-origin="left">
+      <!-- Navbar -->
+      <nav class=" hidden py-4 z-20 md:flex flex-row ml-5 items-center justify-center md:scrollreveal" data-sr-delay="1800" data-sr-origin="bottom" >
+        <div class="space-x-6 bg-electric-violet-400 text-white p-4 rounded-lg  scroll-smooth flex flex-row justify-center items-center shadow-xl w-[550px]">
+          <a href="#about-me" class="text-md  hover:text-black transition-all ">About</a>
+          <a href="#experience" class="text-md  hover:text-black transition-all ">Experience</a>
+          <a href="#projects" class="text-md  hover:text-black transition-all ">Projects</a>
+          <a href="#education" class="text-lmd hover:text-black transition-all ">Education</a>
+          <a href="#blog" class="text-md  hover:text-black transition-all ">Blog</a>
+          <a href="#contact" class="text-md  hover:text-black transition-all ">Contact</a>
+        </div>
+    
+      </nav>
+  
+
       <section id="about-me" class="py-16 ">
               <div class="container mx-auto flex flex-col w-11/12 items-center px-6 md:px-12 lg:px-24">
                 <!-- Descripción de "About Me" -->
@@ -301,7 +305,7 @@
                   <div class="space-y-6">
                     <!-- Certificate 1 -->
                     <div>
-                      <h3 class="text-2xl font-semibold text-slate-400">Data Analytics Diploma</h3>
+                      <h3 class="text-2xl font-semibold text-slate-300">Data Analytics Diploma</h3>
                       <p class="text-slate-400 mb-2">
                         Provided by MinTIC of Colombia and the Universidad Distrital Francisco José de Caldas, 50 hours
                       </p>
@@ -450,6 +454,6 @@
 {% block scripts %}
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="{% static 'js/typed.js' %}"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="{% static "js/scrollreveal.js" %}"></script>
+<script src="https://unpkg.com/md:scrollreveal"></script>
+<script src="{% static "js/md:scrollreveal.js" %}"></script>
 {% endblock scripts %}
