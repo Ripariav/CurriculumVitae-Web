@@ -92,8 +92,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 
-if DEBUG:
+if PRODUCTION:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
