@@ -31,6 +31,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 
 ALLOWED_HOSTS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com', 'https://danielriverav.up.railway.app/']
 
@@ -67,7 +68,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-if DEBUG:
+if not PRODUCTION:
     MIDDLEWARE += ["django_browser_reload.middleware.BrowserReloadMiddleware"]
 
 
@@ -95,7 +96,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
+
 
 if PRODUCTION:
     DATABASES = {
