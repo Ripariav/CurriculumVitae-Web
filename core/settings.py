@@ -187,4 +187,4 @@ TAILWIND_APP_NAME = 'theme'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 #ips para editar el archivo
-CSRF_TRUDSTED_ORIGINS = ['https://danielriverav.up.railway.app ','danielriverav.up.railway.app', 'danielriverav.com']
+CSRF_TRUDSTED_ORIGINS = ['https://danielriverav.up.railway.app','https://danielriverav.com']
