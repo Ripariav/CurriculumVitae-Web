@@ -103,6 +103,10 @@ if PRODUCTION:
     DATABASES = {
         'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
     }
+elif PRODUCTION and DEBUG:
+    DATABASES = {
+        'default': dj_database_url.config(default=os.getenv('DATABASE_PUBLIC_URL'))
+    }
 else:
     DATABASES = {
         'default': {
