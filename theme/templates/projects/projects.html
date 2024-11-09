@@ -12,7 +12,7 @@
                     <li class="  rounded-lg max-w-[300px] max-h-[500px] shadow-lg md:scrollreveal " data-sr-delay="500" data-sr-origin="bottom">   
                         <div class="flex flex-wrap w-full  py-32 px-10 relative ">
                             {% if proyecto.imagen_proyecto %}
-                            <img alt="gallery" class="w-full object-cover h-full object-center block brightness-75 absolute inset-0 rounded-lg" src="{{proyecto.imagen_proyecto.url}}">
+                            <img alt="gallery" class="w-full object-cover h-full object-center block brightness-75 absolute inset-0 rounded-lg" src="{{ proyecto.imagen_proyecto.url }}">
                             {% else %}
                             <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Solid_black.svg/2048px-Solid_black.svg.png" alt="Imagen de {{ proyecto.nombre }}">
                             {% endif %}
