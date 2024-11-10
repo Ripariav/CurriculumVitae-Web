@@ -1080,6 +1080,10 @@ select {
   width: 20rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .w-\[300px\] {
   width: 300px;
 }
@@ -1098,10 +1102,6 @@ select {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .min-w-44 {
