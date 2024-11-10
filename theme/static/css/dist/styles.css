@@ -1100,6 +1100,10 @@ select {
   width: 100vw;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .min-w-44 {
   min-width: 11rem;
 }

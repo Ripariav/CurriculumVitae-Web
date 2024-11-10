@@ -346,11 +346,12 @@
             <section id="blog" class="py-6 ">
               <div class="container  py-10 ">
                 <h2 class="text-4xl font-bold text-slate-200 mb-12 text-center">Blog 🗒️</h2>
-                <div class="flex flex-wrap flex-col md:flex-row items-center justify-center ">
+                <div class="flex flex-wrap flex-col">
+                  <div class="flex flex-wrap flex-col md:flex-row items-center justify-center ">
                   {% if posts %}
                   {% for post in posts|slice:':2' %}
                   
-                  <div class="p-4 max-w-96 ml-2">
+                  <div class="p-4 w-96 ml-2">
                     <div class="h-full border-2 border-gray-700  border-opacity-60 rounded-lg overflow-hidden">
                       {% if post.imagen_banner %}
                       <img class="lg:h-48 md:h-36 w-full object-cover object-center" src="{{ post.imagen_banner.url }}" alt="Imagen de {{ post.titulo }}">
@@ -369,6 +370,7 @@
 
                   {% endfor %}
                   {% endif %}
+                  </div>
                   <div class="mt-12 text-center">
                     <a href="{% url "blog" %}" class="px-6 py-2 bg-electric-violet-500 text-white font-bold rounded-md hover:bg-electric-violet-600">View more posts</a>
                   </div>
