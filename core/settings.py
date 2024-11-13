@@ -34,7 +34,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 PRODUCTION = os.getenv('PRODUCTION', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com', 'https://danielriverav.up.railway.app/']
+ALLOWED_HOSTS = ['localhost','danielriverav.up.railway.app','127.0.0.1', 'danielriverav.com', 'https://danielriverav.up.railway.app/', 'https://www.danielriverav.com']
 
 
 # Application definition
@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 if PRODUCTION:
     DATABASES = {
-        'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+        'default': dj_database_url.config(default=os.getenv('DATABASE_PUBLIC_URL'))
     }
 elif PRODUCTION and DEBUG:
     DATABASES = {
