@@ -162,8 +162,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'theme/static')]
 # Otras configuraciones...
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'staticfiles','media')
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
@@ -192,4 +191,4 @@ TAILWIND_APP_NAME = 'theme'
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 #ips para editar el archivo
-CSRF_TRUSTED_ORIGINS = ['https://danielriverav.up.railway.app','https://danielriverav.com']
+CSRF_TRUSTED_ORIGINS = ['https://danielriverav.up.railway.app','https://danielriverav.com','https://www.danielriverav.com']
